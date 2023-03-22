@@ -58,5 +58,9 @@ public class Cliente {
 		this.endereco = endereco;
 	}
 	
+	public String toString(){
+		return "Nome: " + getNome() + "\nCPF: " + getCpf() + "\nData de Nascimento: " + getDataNascimento()
+		+ "\nIdade: " + getIdade() + "\nEndereço: " + getEndereco();
+	}
 	//TODO implementar toString(): String; validarCPF(String cpf) : boolean;
 }

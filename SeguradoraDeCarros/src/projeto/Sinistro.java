@@ -15,7 +15,7 @@ public class Sinistro {
 		this.id = geraId();
 	}
 	
-	// Função que gera um id para o objeto
+	// FunÃ§Ã¢o que gera um id para o objeto
 	public int geraId() {
 		classId++;
 		return classId;

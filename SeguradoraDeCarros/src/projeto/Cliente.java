@@ -117,8 +117,8 @@ public class Cliente {
 	// Realiza a validação de um dado CPF de uma classe
 	public boolean validarCPF(String cpf){
 
-		// vetCPF é uma string de char que guarda todos os elementos do CPF
-        char vetCPF[];
+		// vetCPF é um vetor de char que guarda todos os elementos do CPF
+    	char vetCPF[];
 
 		formataCPF(cpf);
 		vetCPF = cpfFormatado.toCharArray();

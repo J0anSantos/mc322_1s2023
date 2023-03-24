@@ -1,5 +1,3 @@
-package projeto;
-
 public class Cliente {
 	private String nome;
 	private String cpf;
@@ -59,20 +57,20 @@ public class Cliente {
 		this.endereco = endereco;
 	}
 
-	// Função que formata o CPF, removendo os caracteres especiais e retornando o CPF formatado
+	// Função que formata o CPF, removendo os caracteres especiais e alterando a variavel de classe: cpfFormatado
 	public void formataCPF(String cpf){
 		this.cpfFormatado = cpf.replaceAll("\\.", "");
 		this.cpfFormatado = this.cpfFormatado.replaceAll("-", "");
 	}
 
-	// Retorna a quantidade de números no CPF
+	// Retorna a quantidade de números existentes no CPF informado
 	public int tamanhoCPF(String cpf){
 		return cpf.length();
 	}
 
-	// Verifica se todos os numeros do CPF são iguais
+	// Verifica se todos os numeros do CPF são iguais e retorna falso caso nao sejem todos iguais
 	public boolean ehIgual(char cpf[]){
-		int ini = cpf[0];
+		char ini = cpf[0];
 
 		for(int i = 1; i<11; i++){
             if(cpf[i] != ini)
@@ -116,33 +114,33 @@ public class Cliente {
 
 	// Realiza a validação de um dado CPF de uma classe
 	public boolean validarCPF(String cpf){
-
-		// vetCPF é um vetor de char que guarda todos os elementos do CPF
-		 char vetCPF[];
+		char vetCPF[];
 
 		formataCPF(cpf);
+
+		// vetCPF é um vetor de caracteres que guarda todos os elementos do CPF
 		vetCPF = cpfFormatado.toCharArray();
+
+
 		// Verificação do tamanho da String CPF, se tamanho incorreto é retornado falso
-		if(tamanhoCPF(cpfFormatado) != 11){
+		if(tamanhoCPF(cpfFormatado) != 11)
 			return false;
-		}
-		// Verifica se todos os números do CPF são iguais, caso seja retorna falso
-		else if(ehIgual(vetCPF) == true){
-		    return false;
-		}
 		
+		// Verifica se todos os números do CPF são iguais, caso sejam todos iguais retorna falso
+		else if(ehIgual(vetCPF) == true)
+		    return false;
 		
 		// Retorna true se o primeiro e o segundo digito verificador for válido
 		if(primeiroDigitoVerificador(vetCPF) && segundoDigitoVerificador(vetCPF))
 			return true;
-		else{
+		else
 			return false;
-		}
-	   }
+	}
 	
+	// Realiza a impressão de todos os atributos da classe
 	public String toString(){
-		return "Nome: " + getNome() + "\nCPF: " + getCpf() + "\nData de Nascimento: " + getDataNascimento()
-		+ "\nIdade: " + getIdade() + "\nEndereço: " + getEndereco();
+		return "Cliente\n\n" + "Nome: " + getNome() + "\nCPF: " + getCpf() + "\nData de Nascimento: " + getDataNascimento()
+		+ "\nIdade: " + getIdade() + "\nEndereço: " + getEndereco() + "\n\n";
 	}
 	
 	

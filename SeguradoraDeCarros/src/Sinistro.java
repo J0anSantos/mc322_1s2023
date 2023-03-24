@@ -1,6 +1,3 @@
-package projeto;
-
-
 public class Sinistro {
 	private static int classId = 0;
 	private int id;
@@ -40,5 +37,10 @@ public class Sinistro {
 	
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
-	} 
+	}
+	
+	// Realiza a impressão de todos os atributos da classe
+	public String toString(){
+		return "Sinistro\n\n" + "ID: " + getID() + "\nData: " + getData() + "\nEndereço: " + getEndereco() + "\n\n";
+	}
 }

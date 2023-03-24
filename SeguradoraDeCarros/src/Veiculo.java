@@ -1,5 +1,3 @@
-package projeto;
-
 public class Veiculo {
 	private String placa;
 	private String marca;
@@ -35,5 +33,10 @@ public class Veiculo {
 	
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
+	}
+
+	// Realiza a impressão de todos os atributos da classe
+	public String toString(){
+		return "Veiculo\n\n" + "Placa: " + getPlaca() + "\nMarca: " + getMarca() + "\nModelo: " + getModelo() + "\n\n";
 	}
 }

@@ -1,5 +1,3 @@
-package projeto;
-
 public class Seguradora {
 	private String nome;
 	private String telefone;
@@ -45,6 +43,12 @@ public class Seguradora {
 	
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
+	}
+
+	// Realiza a impressão de todos os atributos da classe
+	public String toString(){
+		return "Seguradora\n\n" + "Seguradora: " + getNome() + "\nTelefone: " + getTelefone() + "\nEmail: " + getEmail()
+		+ "\nEndereço: " + getEndereco() + "\n\n";
 	}
 	
 }

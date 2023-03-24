@@ -73,7 +73,7 @@ public class Cliente {
 		char ini = cpf[0];
 
 		for(int i = 1; i<11; i++){
-        	if(cpf[i] != ini)
+			if(cpf[i] != ini)
 				return false;
 		}
 		return true;

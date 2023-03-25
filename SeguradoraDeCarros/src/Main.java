@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// Classe principal do programa
 public class Main {
 
 	public static void main(String[] args) {
